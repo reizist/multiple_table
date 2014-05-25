@@ -1,0 +1,19 @@
+<% side = [*1..9].shuffle %>
+<% horizontal = [*1..9].shuffle %>
+<h2>100ます計算</h2>
+<table id="multiTable" border="1" cellspacing="0" width="800px" height="800px">
+  <tr>
+    <th> * </th>
+    <% side.each do |j| %>
+      <th align="center"><%= j %></th>
+    <% end %>
+  </tr>
+  <% horizontal.each_with_index do |h| %>
+  <tr>
+    <th><%= h %></th>
+    <% side.each do |s| %>
+      <td align="center"><%= h*s %></td>
+    <% end %>
+  </tr>
+  <% end %>
+</table>
