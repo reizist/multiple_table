@@ -1,3 +1,19 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
-<%= button_to 'pdf', sample_pdf_path(format: :pdf, debug: 1), method: 'get' %>
+<div id="type" class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary active">
+    <input type="radio" name="options" id="option1" value="multi">掛け算
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="option2" value="plus">足し算
+  </label>
+</div>
+
+<input type="checkbox" id="random" checked>
+<label for="random">ランダム</label>
+
+<div style="padding:20px">
+<button class="btn btn-lg" onclick="option()"><%= glyph(:download)%> download</button>
+</div>
+
+<%#= button_to sample_pdf_path(format: :pdf), method: 'get', class: 'btn btn-lg' do %>
+  <%#= glyph(:download) %> <!--download-->
+<%# end %>
