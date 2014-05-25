@@ -6,8 +6,12 @@ class PdfsController < ApplicationController
         render pdf: 'sample',
                encoding: 'UTF-8',
                layout: 'pdf.html',
-               show_as_html: params[:debug].present?
+               type: params[:types],
+               random: params[:random],
+               #show_as_html: params[:debug].present?,
+               save_to_file: Rails.root.join('tmp', "test.pdf")
       end
+      #format.pdf { send_file(Rails.root.join('tmp', "test.pdf"), filename: 'hoge.pdf') }
     end
   end
 end
