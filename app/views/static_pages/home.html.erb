@@ -11,9 +11,10 @@
 <label for="random">ランダム</label>
 
 <div style="padding:20px">
-<button class="btn btn-lg" onclick="option()"><%= glyph(:download)%> download</button>
-</div>
+<!--<button class="btn btn-lg" onclick="option()"><%= glyph(:download)%> download</button>-->
 
-<%#= button_to sample_pdf_path(format: :pdf), method: 'get', class: 'btn btn-lg' do %>
-  <%#= glyph(:download) %> <!--download-->
-<%# end %>
+
+<%= button_to sample_pdf_path(format: :pdf), method: 'get', class: 'btn btn-lg' do %>
+  <%= glyph(:download) %> download
+<% end %>
+</div>
